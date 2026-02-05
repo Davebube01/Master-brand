@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/public/svgs/richie-logo.svg";
-import bottom from "@/public/bottom.png";
+import logo from "@/assets/svgs/richie-logo.svg";
+import bottom from "@/assets/bottom.png";
 
 export default function Footer() {
   return (
@@ -75,7 +75,7 @@ export default function Footer() {
           {/* Column 4: Legal */}
           <div className="md:col-span-1">
             <h4 className="text-[#1A332F] font-bold text-xl mb-4">Legal</h4>
-              <ul className="space-y-2">
+            <ul className="space-y-2">
               <li>
                 <Link
                   href="/privacy"

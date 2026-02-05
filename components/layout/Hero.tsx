@@ -1,22 +1,22 @@
 "use client";
 
-import logo from "@/public/svgs/richie-logo.svg";
+import logo from "@/assets/svgs/richie-logo.svg";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { ArrowRight, Menu, X } from "lucide-react";
-import heroImage from "@/public/svgs/hero.svg";
-import icon from "@/public/icon/house-icon.svg";
+import heroImage from "@/assets/svgs/hero.svg";
+import icon from "@/assets/icon/house-icon.svg";
 import { useState } from "react";
 
 export default function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white rounded-2xl min-h-screen">
+    <div className="bg-white rounded-2xl">
       <nav className="flex items-center justify-between text-primary py-5 px-4 max-w-5xl mx-auto relative z-50">
         <div>
-          <Image src={logo} alt="logo" className="w-14 md:w-full "/>
+          <Image src={logo} alt="logo" className="w-14 md:w-full " />
         </div>
 
         {/* Desktop Navigation */}
@@ -74,7 +74,7 @@ export default function HeroSection() {
         )}
       </nav>
 
-      <section className="relative w-full overflow-hidden py-12 z-0">
+      <section className="relative w-full overflow-hidden py-12 z-0 min-h-screen">
         {/* Grid Background with filled cells */}
         <div className="absolute inset-0 -z-10 mask-[linear-gradient(to_bottom,transparent,white)]">
           {/* Base grid */}
@@ -126,7 +126,7 @@ export default function HeroSection() {
             <Image
               src={heroImage}
               alt="Real Estate Property"
-              className="w-full h-auto object-contain rounded-3xl shadow-2xl"
+              className="w-full h-full object-contain rounded-3xl shadow-2xl"
               priority
             />
 

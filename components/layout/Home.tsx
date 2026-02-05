@@ -3,22 +3,22 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import icon from "@/public/icon/Vector.svg";
-import asset from "@/public/svgs/asset.svg";
-import assetAcademy from "@/public/svgs/asset-academy.svg";
-import assetDashboard from "@/public/svgs/asset-dashboard.svg";
+import icon from "@/assets/icon/Vector.svg";
+import asset from "@/assets/svgs/asset.svg";
+import assetAcademy from "@/assets/svgs/asset-academy.svg";
+import assetDashboard from "@/assets/svgs/asset-dashboard.svg";
 import { Plus, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import blog from "@/public/icon/blog.svg";
-import coins from "@/public/icon/Coins.svg";
-import cube from "@/public/icon/Cube.svg";
-import graduationCap from "@/public/icon/GraduationCap.svg";
-import spiral from "@/public/icon/Spiral.svg";
-import house from "@/public/svgs/house.svg";
-import funds from "@/public/svgs/funds.svg";
-import money from "@/public/svgs/money.svg";
-import grow from "@/public/svgs/grow.svg";
-import bg from "@/public/svgs/bg.svg";
+import blog from "@/assets/icon/blog.svg";
+import coins from "@/assets/icon/Coins.svg";
+import cube from "@/assets/icon/Cube.svg";
+import graduationCap from "@/assets/icon/GraduationCap.svg";
+import spiral from "@/assets/icon/Spiral.svg";
+import house from "@/assets/svgs/house.svg";
+import funds from "@/assets/svgs/funds.svg";
+import money from "@/assets/svgs/money.svg";
+import grow from "@/assets/svgs/grow.svg";
+import bg from "@/assets/svgs/bg.svg";
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -320,7 +320,7 @@ export default function Home() {
             </h2>
             <p className="text-gray-500 text-lg md:max-w-[280px] text-center md:text-left">
               Everything you need to know about RiChei Assets can be answered.
-              Have more questions?{" "} <br className="md:block hidden"/>
+              Have more questions? <br className="md:block hidden" />
               <span>
                 <Link href="/contact" className="">
                   <span className="text-[#1A332F] font-bold underline underline-offset-4 hover:text-primary/80">
