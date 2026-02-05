@@ -13,7 +13,7 @@ export default function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white rounded-2xl">
+    <div className="bg-white rounded-2xl min-h-screen">
       <nav className="flex items-center justify-between text-primary py-5 px-4 max-w-5xl mx-auto relative z-50">
         <div>
           <Image src={logo} alt="logo" className="w-14 md:w-full "/>
