@@ -239,7 +239,7 @@ export default function Home() {
           </div>
 
           {/* Card 2: Fund */}
-          <div className="bg-[#F5F5F5] col-span-4 lg:col-span-3 rounded-lg p-8 md:p-10 relative h-[280px] overflow-hidden group">
+          <div className="bg-[#F5F5F5] col-span-4 md:col-span-3 rounded-lg p-8 md:p-10 relative h-[280px] overflow-hidden group">
             <h3 className="text-3xl md:text-3xl font-bold text-primary mb-2">
               2. Fund
             </h3>
@@ -259,7 +259,7 @@ export default function Home() {
           </div>
 
           {/* Card 3: Receive */}
-          <div className="bg-[#F5F5F5] col-span-4 lg:col-span-3 rounded-lg p-8 md:p-10 relative h-[280px] overflow-hidden group">
+          <div className="bg-[#F5F5F5] col-span-4 md:col-span-3 rounded-lg p-8 md:p-10 relative h-[280px] overflow-hidden group">
             <h3 className="text-3xl md:text-3xl font-bold text-primary mb-2">
               3. Receive
             </h3>
@@ -306,23 +306,30 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
           {/* Left Column: Header */}
           <div className="md:col-span-4">
-            <h2 className="text-4xl md:text-5xl font-semibold text-[#1A332F] mb-6">
-              Frequently
-              <br />
-              Asked
-              <br />
-              Questions
+            <h2 className="text-center md:text-left text-4xl md:text-5xl font-semibold text-[#1A332F] mb-6">
+              <span className="hidden md:flex flex-col items-center md:items-start">
+                Frequently
+                <br className="hidden md:block" />
+                Asked
+                <br className="hidden md:block" />
+                Questions
+              </span>
+              <span className="items-center md:items-start md:hidden block">
+                Frequently Asked Questions
+              </span>
             </h2>
-            <p className="text-gray-500 text-lg md:max-w-[280px]">
+            <p className="text-gray-500 text-lg md:max-w-[280px] text-center md:text-left">
               Everything you need to know about RiChei Assets can be answered.
-              Have more questions?
+              Have more questions?{" "} <br className="md:block hidden"/>
+              <span>
+                <Link href="/contact" className="">
+                  <span className="text-[#1A332F] font-bold underline underline-offset-4 hover:text-primary/80">
+                    Contact
+                  </span>{" "}
+                  our team.
+                </Link>
+              </span>
             </p>
-            <Link href="/contact" className="">
-              <span className="text-[#1A332F] font-bold underline underline-offset-4 hover:text-primary/80">
-                Contact
-              </span>{" "}
-              our team.
-            </Link>
           </div>
 
           {/* Right Column: Accordion */}
