@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/assets/svgs/richie-logo.svg";
+import logo from "@/assets/richie-logo.png";
 import bottom from "@/assets/bottom.png";
 
 export default function Footer() {

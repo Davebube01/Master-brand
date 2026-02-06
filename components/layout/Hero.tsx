@@ -1,11 +1,11 @@
 "use client";
 
-import logo from "@/assets/svgs/richie-logo.svg";
+import logo from "@/assets/richie-logo.png";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { ArrowRight, Menu, X } from "lucide-react";
-import heroImage from "@/assets/svgs/hero.svg";
+import heroImage from "@/assets/hero.png";
 import icon from "@/assets/icon/house-icon.svg";
 import { useState } from "react";
 
@@ -16,7 +16,7 @@ export default function HeroSection() {
     <div className="bg-white rounded-2xl">
       <nav className="flex items-center justify-between text-primary py-5 px-4 max-w-5xl mx-auto relative z-50">
         <div>
-          <Image src={logo} alt="logo" className="w-14 md:w-full " />
+          <Image src={logo} alt="logo" className="w-14 md:w-16 " />
         </div>
 
         {/* Desktop Navigation */}
@@ -126,7 +126,7 @@ export default function HeroSection() {
             <Image
               src={heroImage}
               alt="Real Estate Property"
-              className="w-full h-full object-contain rounded-3xl shadow-2xl"
+              className="object-contain rounded-3xl shadow-2xl"
               priority
             />
 

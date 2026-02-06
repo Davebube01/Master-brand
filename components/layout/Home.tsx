@@ -4,21 +4,33 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import icon from "@/assets/icon/Vector.svg";
-import asset from "@/assets/svgs/asset.svg";
-import assetAcademy from "@/assets/svgs/asset-academy.svg";
-import assetDashboard from "@/assets/svgs/asset-dashboard.svg";
-import { Plus, X, ArrowRight } from "lucide-react";
+import asset from "@/assets/asset.png";
+import assetAcademy from "@/assets/asset-academy.png";
+import assetDashboard from "@/assets/asset-dashboard.png";
+import {
+  Plus,
+  X,
+  ArrowRight,
+  Building2,
+  FileText,
+  PieChart,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import blog from "@/assets/icon/blog.svg";
 import coins from "@/assets/icon/Coins.svg";
 import cube from "@/assets/icon/Cube.svg";
 import graduationCap from "@/assets/icon/GraduationCap.svg";
 import spiral from "@/assets/icon/Spiral.svg";
-import house from "@/assets/svgs/house.svg";
-import funds from "@/assets/svgs/funds.svg";
-import money from "@/assets/svgs/money.svg";
-import grow from "@/assets/svgs/grow.svg";
-import bg from "@/assets/svgs/bg.svg";
+import house from "@/assets/house.png";
+import funds from "@/assets/funds.png";
+import money from "@/assets/money.png";
+import grow from "@/assets/grow.png";
+import bg from "@/assets/bg.png";
+import projects from "@/assets/projects.png";
+import investment from "@/assets/investment.png";
+import vault from "@/assets/vault.png";
+import building from "@/assets/icon/Buildings.svg"
+import fileDoc from "@/assets/icon/FileDoc.svg"
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -175,25 +187,87 @@ export default function Home() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-x-8">
-          {/* Card 1: RiChei Assets */}
-          <div className="group md:col-span-3">
-            <div className="relative h-[280px] md:h-[320px] w-full rounded-2xl overflow-hidden mb-6 bg-gray-100"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Card 1: My Projects */}
+          <div className="group relative h-[320px] md:h-[380px] w-full rounded-md overflow-hidden bg-[#F4F4F4] p-8">
+            <div className="flex flex-col h-full z-20 relative pointer-events-none">
+              <div className="bg-white px-4 py-2 rounded-full inline-flex items-center gap-2  self-start mb-4">
+                <Image src={building} alt="building" className="w-4 h-4" />
+                <span className="font-bold text-primary text-sm">
+                  My Projects
+                </span>
+              </div>
+              <h3 className="text-xl md:text-xl font-semibold text-primary max-w-xs mb-2">
+                Full details of the projects you invest in
+              </h3>
+            </div>
+
+            {/* Background Image (Left/Back) */}
+            <div className="absolute bottom-0 left-[20px] w-[60%] h-[70%] z-0 opacity-40 scale-90 translate-y-4">
+              <Image
+                src={projects}
+                alt="My Projects Background"
+                fill
+                className="object-contain object-bottom-left"
+              />
+            </div>
+
+            {/* Foreground Image (Right/Front) */}
+            <div className="absolute bottom-0 right-0 w-[75%] h-[85%] z-10 transition-transform duration-500 group-hover:scale-105">
+              <Image
+                src={projects}
+                alt="My Projects Foreground"
+                fill
+                className="object-contain object-bottom-right"
+              />
+            </div>
           </div>
 
-          {/* Card 2: RiChei Academy */}
-          <div className="group md:col-span-2">
-            <div className="relative h-[280px] md:h-[320px] w-full rounded-2xl overflow-hidden mb-6 bg-gray-100"></div>
+          {/* Card 2: Document Vault */}
+          <div className="group relative h-[320px] md:h-[380px] w-full rounded-md overflow-hidden bg-[#F4F4F4] p-8">
+            <div className="flex flex-col h-full z-10 relative">
+              <div className="bg-white px-4 py-2 rounded-full inline-flex items-center gap-2  self-start mb-4">
+                <Image src={fileDoc} alt="fileDoc" className="w-4 h-4" />
+                <span className="font-bold text-primary text-sm">
+                  Document Vault
+                </span>
+              </div>
+              <h3 className="text-xl md:text-xl font-semibold text-primary max-w-xs">
+                Instant access to your Survey Plans and Allocation Letters.
+              </h3>
+            </div>
+            <div className="absolute bottom-0 right-0 w-[90%] h-[60%]">
+              <Image
+                src={vault}
+                alt="Document Vault"
+                fill
+                className="object-contain object-bottom-right transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
           </div>
 
-          {/* Card 3: RiChei Blog */}
-          <div className="group md:col-span-2">
-            <div className="relative h-[280px] md:h-[320px] w-full rounded-2xl overflow-hidden mb-6 bg-gray-100"></div>
-          </div>
-
-          {/* Card 4: Member Dashboard */}
-          <div className="group md:col-span-3">
-            <div className="relative h-[280px] md:h-[320px] w-full rounded-2xl overflow-hidden mb-6 bg-gray-100"></div>
+          {/* Card 3: Investment tracking */}
+          <div className="group md:col-span-2 relative h-[320px] md:h-[450px] w-full rounded-md overflow-hidden bg-[#F4F4F4] p-8">
+            <div className="flex flex-col h-full z-10 relative">
+              <div className="bg-white px-4 py-2 rounded-full inline-flex items-center gap-2  self-start mb-4">
+                <Image src={coins} alt="icon" className="w-4 h-4" />
+                <span className="font-bold text-primary text-sm">
+                  Investment tracking
+                </span>
+              </div>
+              <h3 className="text-xl md:text-xl font-semibold text-primary max-w-lg mb-2">
+                Monitor your ROI progress and track token balances in one view.
+                Stay informed for better financial decisions.
+              </h3>
+            </div>
+            <div className="absolute bottom-0 right-0 w-full h-[60%] md:h-[70%]">
+              <Image
+                src={investment}
+                alt="Investment tracking"
+                fill
+                className="object-contain object-bottom transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -405,13 +479,13 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-              <Button className="bg-white text-[#1A332F] hover:bg-gray-100 rounded-full text-lg h-12 px-8 w-full md:w-auto">
+              <Button className="bg-white text-[#1A332F] hover:bg-gray-200 rounded-full text-lg h-12 px-8 w-full md:w-auto">
                 Get started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button
                 variant="outline"
-                className="bg-transparent border-white text-white hover:bg-white/10 rounded-full text-lg h-12 px-8 w-full md:w-auto"
+                className="bg-transparent border-white text-white hover:bg-white rounded-full text-lg h-12 px-8 w-full md:w-auto"
               >
                 Book a Demo
               </Button>
