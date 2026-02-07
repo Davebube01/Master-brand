@@ -1,5 +1,5 @@
-import PageUnderConstruction from "@/components/admin/PageUnderConstruction";
+import WalletContent from "@/components/admin/WalletContent";
 
 export default function WalletPage() {
-  return <PageUnderConstruction />;
+  return <WalletContent />;
 }

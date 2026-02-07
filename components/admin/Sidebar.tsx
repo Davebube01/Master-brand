@@ -21,19 +21,19 @@ export const sidebarLinks = [
     icon: SquaresFourIcon,
   },
   {
-    title: "Marketplace",
-    href: "/admin/marketplace",
-    icon: StorefrontIcon,
+    title: "Wallet",
+    href: "/admin/wallet",
+    icon: WalletIcon,
   },
-  {
+   {
     title: "Academy",
     href: "/admin/academy",
     icon: GraduationCapIcon,
   },
   {
-    title: "Wallet",
-    href: "/admin/wallet",
-    icon: WalletIcon,
+    title: "Marketplace",
+    href: "/admin/marketplace",
+    icon: StorefrontIcon,
   },
 ];
 
@@ -122,6 +122,7 @@ export default function Sidebar() {
 
         {/* Sign Out */}
         <div className="mt-auto p-3">
+          <Link href="/auth">
           <button
             className={cn(
               "flex w-full items-center rounded-md py-2 text-sm font-medium text-red-600 hover:bg-red-50 transition-colors",
@@ -136,6 +137,7 @@ export default function Sidebar() {
               </span>
             )}
           </button>
+          </Link>
         </div>
       </div>
     </aside>

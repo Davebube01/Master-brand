@@ -1,5 +1,5 @@
-import PageUnderConstruction from "@/components/admin/PageUnderConstruction";
+import AcademyContent from "@/components/admin/AcademyContent";
 
 export default function AcademyPage() {
-  return <PageUnderConstruction />;
+  return <AcademyContent />;
 }
