@@ -16,7 +16,7 @@ import WalletIcon from "@/assets/admin/Wallet.svg";
 
 export const sidebarLinks = [
   {
-    title: "Portfolio",
+    title: "Dashboard",
     href: "/admin/dashboard",
     icon: SquaresFourIcon,
   },
