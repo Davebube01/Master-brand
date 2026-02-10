@@ -29,8 +29,8 @@ import bg from "@/assets/bg.png";
 import projects from "@/assets/projects.png";
 import investment from "@/assets/investment.png";
 import vault from "@/assets/vault.png";
-import building from "@/assets/icon/Buildings.svg"
-import fileDoc from "@/assets/icon/FileDoc.svg"
+import building from "@/assets/icon/Buildings.svg";
+import fileDoc from "@/assets/icon/FileDoc.svg";
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -168,7 +168,7 @@ export default function Home() {
       </div>
 
       {/* second section */}
-      <div className="max-w-6xl mx-auto px-4 py-10">
+      <div id="features" className="max-w-6xl mx-auto px-4 py-10">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-[#F9F9F9] px-4 py-2 rounded-full text-sm font-medium text-gray-600 mb-6 border border-gray-100">
@@ -376,7 +376,7 @@ export default function Home() {
       </div>
 
       {/* FAQ Section */}
-      <div className="mx-auto px-4 my-20 py-20 bg-[#F4F4F4]">
+      <div id="faq" className="mx-auto px-4 my-20 py-20 bg-[#F4F4F4]">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
           {/* Left Column: Header */}
           <div className="md:col-span-4">
@@ -451,7 +451,7 @@ export default function Home() {
       </div>
 
       {/* CTA Section */}
-      <div className="max-w-6xl mx-auto px-4">
+      <div id="contact" className="max-w-6xl mx-auto px-4">
         <div className="rounded-2xl p-8 md:p-20 text-center relative overflow-hidden">
           {/* Background Image */}
           <Image

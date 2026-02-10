@@ -12,6 +12,18 @@ import { useState } from "react";
 export default function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleSmoothScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    targetId: string,
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <div className="bg-white rounded-2xl">
       <nav className="flex items-center justify-between text-primary py-5 px-4 max-w-5xl mx-auto relative z-50">
@@ -25,15 +37,27 @@ export default function HeroSection() {
             <Link href="/">
               <li>Home</li>
             </Link>
-            <Link href="/features">
+            <a
+              href="#features"
+              onClick={(e) => handleSmoothScroll(e, "features")}
+              className="cursor-pointer"
+            >
               <li>Features</li>
-            </Link>
-            <Link href="/faq">
+            </a>
+            <a
+              href="#faq"
+              onClick={(e) => handleSmoothScroll(e, "faq")}
+              className="cursor-pointer"
+            >
               <li>FAQ</li>
-            </Link>
-            <Link href="/contact">
+            </a>
+            <a
+              href="#contact"
+              onClick={(e) => handleSmoothScroll(e, "contact")}
+              className="cursor-pointer"
+            >
               <li>Contact us</li>
-            </Link>
+            </a>
             <Button className="bg-[#263330] text-white hover:bg-[#263330]/90 rounded-full text-sm">
               Learn More
             </Button>
@@ -52,18 +76,34 @@ export default function HeroSection() {
         {isMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-white shadow-lg p-6 rounded-b-2xl md:hidden flex flex-col gap-4 animate-in fade-in slide-in-from-top-5 duration-300">
             <ul className="flex flex-col gap-4 font-medium text-center">
-              <Link href="/" onClick={() => setIsMenuOpen(false)}>
+              <a
+                href="#home"
+                onClick={(e) => handleSmoothScroll(e, "home")}
+                className="cursor-pointer"
+              >
                 <li className="py-2 hover:bg-gray-50 rounded-lg">Home</li>
-              </Link>
-              <Link href="/features" onClick={() => setIsMenuOpen(false)}>
+              </a>
+              <a
+                href="#features"
+                onClick={(e) => handleSmoothScroll(e, "features")}
+                className="cursor-pointer"
+              >
                 <li className="py-2 hover:bg-gray-50 rounded-lg">Features</li>
-              </Link>
-              <Link href="/faq" onClick={() => setIsMenuOpen(false)}>
+              </a>
+              <a
+                href="#faq"
+                onClick={(e) => handleSmoothScroll(e, "faq")}
+                className="cursor-pointer"
+              >
                 <li className="py-2 hover:bg-gray-50 rounded-lg">FAQ</li>
-              </Link>
-              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+              </a>
+              <a
+                href="#contact"
+                onClick={(e) => handleSmoothScroll(e, "contact")}
+                className="cursor-pointer"
+              >
                 <li className="py-2 hover:bg-gray-50 rounded-lg">Contact us</li>
-              </Link>
+              </a>
               <div className="pt-2">
                 <Button className="w-full bg-[#263330] text-white hover:bg-[#263330]/90 rounded-full text-sm">
                   Learn More
