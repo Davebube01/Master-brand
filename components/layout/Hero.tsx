@@ -59,7 +59,7 @@ export default function HeroSection() {
               <li>Contact us</li>
             </a>
             <Button className="bg-[#263330] text-white hover:bg-[#263330]/90 rounded-full text-sm">
-              Learn More
+              <Link href="/auth/">Learn More</Link>
             </Button>
           </ul>
         </div>
