@@ -479,10 +479,11 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+              <Link href="/auth/">
               <Button className="bg-white text-[#1A332F] hover:bg-gray-200 rounded-full text-lg h-12 px-8 w-full md:w-auto">
                 Get started
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+              </Button></Link>
               <Button
                 variant="outline"
                 className="bg-transparent border-white text-white hover:bg-white rounded-full text-lg h-12 px-8 w-full md:w-auto"

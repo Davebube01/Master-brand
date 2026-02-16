@@ -58,9 +58,11 @@ export default function HeroSection() {
             >
               <li>Contact us</li>
             </a>
-            <Button className="bg-[#263330] text-white hover:bg-[#263330]/90 rounded-full text-sm">
-              <Link href="/auth/">Learn More</Link>
-            </Button>
+            <Link href="/auth/">
+              <Button className="bg-[#263330] text-white hover:bg-[#263330]/90 rounded-full text-sm">
+                Learn More
+              </Button>
+            </Link>
           </ul>
         </div>
 
@@ -105,9 +107,11 @@ export default function HeroSection() {
                 <li className="py-2 hover:bg-gray-50 rounded-lg">Contact us</li>
               </a>
               <div className="pt-2">
-                <Button className="w-full bg-[#263330] text-white hover:bg-[#263330]/90 rounded-full text-sm">
-                  Learn More
-                </Button>
+                <Link href="/auth/">
+                  <Button className="w-full bg-[#263330] text-white hover:bg-[#263330]/90 rounded-full text-sm">
+                    Learn More
+                  </Button>
+                </Link>
               </div>
             </ul>
           </div>
@@ -153,10 +157,12 @@ export default function HeroSection() {
             Manage your finances with our app that merges saving, investing, and
             planning tools to achieve your goals.
           </p>
-          <Button className="bg-[#263330] hover:bg-[#263330]/90 text-white py-6 rounded-full text-base font-medium shadow-lg">
-            Get started
-            <ArrowRight className="ml-2" />
-          </Button>
+          <Link href="/auth/">
+            <Button className="bg-primary text-white hover:bg-primary/90 rounded-full text-lg h-12 px-8 w-full md:w-auto">
+              Get started
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </Link>
         </div>
 
         {/* Image Section with Floating Cards */}
